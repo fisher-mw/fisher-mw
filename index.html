@@ -1,12 +1,60 @@
-<header>
-    // nav bar
-</header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Software Developer</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
 
-<main> 
-    // content
-</main>
+    <nav class="navbar">
+        <div class="logo">YN</div>
+        <ul class="nav-links">
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="resume.pdf" target="_blank">Resume</a></li>
+        </ul>
+    </nav>
 
+    <header class="hero">
+        <h1>Hi, I'm <span class="highlight">Your Name</span>.</h1>
+        <p>Computer Science student focused on building clean, functional software.</p>
+    </header>
 
-<footer> 
-    // contact
-</footer>
+    <main id="projects" class="container">
+        <h2 class="section-title">Selected Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="card-content">
+                    <h3>Project Title</h3>
+                    <p>A brief description of the problem you solved. Mention tech like Python, Java, or C++.</p>
+                    <div class="tags">
+                        <span>Assembly</span>
+                        <span>CPSC 213</span>
+                    </div>
+                    <a href="#" class="project-link">View Code →</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="card-content">
+                    <h3>Machine Learning Model</h3>
+                    <p>Analyzing datasets using Pandas and Scikit-Learn to predict outcomes.</p>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                    </div>
+                    <a href="#" class="project-link">View Case Study →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Built by Your Name</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+/* 1. Design Tokens (The "Figma" variables) */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --secondary-text: #666666;
+    --accent-color: #0070f3; /* Modern Blue */
+    --card-bg: #f5f5f7;
+    --border-radius: 12px;
+    --max-width: 1000px;
+}
+
+/* 2. Reset & Basics */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding-top: 80px; /* Space for fixed nav */
+}
+
+/* 3. Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px); /* Modern frosted glass effect */
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* 4. Hero Section */
+.hero {
+    max-width: var(--max-width);
+    margin: 100px auto;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.highlight {
+    color: var(--accent-color);
+}
+
+/* 5. Project Grid */
+.container {
+    max-width: var(--max-width);
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    margin-bottom: 30px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.tags {
+    margin: 15px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.tags span {
+    background: #e0e0e0;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* 6. Footer */
+.footer {
+    text-align: center;
+    padding: 50px;
+    color: var(--secondary-text);
+}
