@@ -164,4 +164,34 @@ body.dark-mode {
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* end dark mode */
+
+#profile-pic {
+width: 200px;
+height: 200px;
+object-fit: cover;
+border-radius: 50%;
+border: 3px solid #333; 
+object-position: 90% 60%;
+}
+
+.hero-container {
+    display: flex;         /* Moves items to a horizontal row */
+    align-items: center;   /* Vertically aligns text with the middle of the image */
+    gap: 30px;            /* Adds space between the image and the text */
+    max-width: 900px;      /* Keeps the content from stretching too wide */
+    margin: 0 auto;        /* Centers the whole container on the page */
+    padding: 40px 20px;
+  }
+  
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top; /* From our previous adjustment */
+    flex-shrink: 0;             /* Prevents the image from getting squashed */
+  }
+  
+  .hero-text h1 {
+    margin-bottom: 10px;
+  }
