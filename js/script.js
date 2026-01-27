@@ -6,10 +6,10 @@ const setTheme = (theme) => {
     if (theme === 'dark') {
         body.classList.add('dark-mode');
         // IMPORTANT: Use the exact same path here as your HTML
-        themeIcon.src = 'assets/light-mode.png'; // If dark mode is on, show the sun/light icon
+        themeIcon.src = 'assets//website/light-mode.png'; // If dark mode is on, show the sun/light icon
     } else {
         body.classList.remove('dark-mode');
-        themeIcon.src = 'assets/night-mode.png'; // If light mode is on, show the moon/night icon
+        themeIcon.src = 'assets/website/night-mode.png'; // If light mode is on, show the moon/night icon
     }
     localStorage.setItem('theme', theme);
 };

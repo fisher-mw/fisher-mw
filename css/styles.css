@@ -3,7 +3,7 @@
     --bg-color: #ffffff;
     --text-color: #1a1a1a;
     --secondary-text: #666666;
-    --accent-color: #0070f3; /* Modern Blue */
+    --accent-color: #6f7e8f; /* Modern Blue */
     --card-bg: #f5f5f7;
     --border-radius: 12px;
     --max-width: 1000px;
@@ -33,7 +33,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 5%;
-    background: rgba(255, 255, 255, 0.8);
+    background: #b5c1ce;
     backdrop-filter: blur(10px); /* Modern frosted glass effect */
     z-index: 1000;
 }
@@ -128,13 +128,12 @@ body {
     color: var(--secondary-text);
 }
 
-/* Dark Mode Colors */
 body.dark-mode {
     --bg-color: #0f172a;       
     --text-color: #f8fafc;     
     --secondary-text: #94a3b8;
     --card-bg: #1e293b;        
-    --accent-color: #38bdf8;  
+    --accent-color: #6e7b80;  
 }
 
 
