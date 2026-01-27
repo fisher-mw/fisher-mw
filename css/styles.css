@@ -7,6 +7,7 @@
     --card-bg: #f5f5f7;
     --border-radius: 12px;
     --max-width: 1000px;
+    --nav-bg: #666666; /* Or whatever your light navbar color is */
 }
 
 /* 2. Reset & Basics */
@@ -36,6 +37,9 @@ body {
     background: #b5c1ce;
     backdrop-filter: blur(10px); /* Modern frosted glass effect */
     z-index: 1000;
+    background-color: var(--nav-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
 .nav-links {
@@ -107,7 +111,7 @@ body {
 }
 
 .tags span {
-    background: #e0e0e0;
+    background: #4f5e6d;
     padding: 4px 10px;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -134,6 +138,7 @@ body.dark-mode {
     --secondary-text: #94a3b8;
     --card-bg: #1e293b;        
     --accent-color: #6e7b80;  
+    --nav-bg: #1e293b;   /* Adding this: matches your card-bg or slightly darker */
 }
 
 
@@ -178,7 +183,7 @@ object-position: 90% 60%;
     display: flex;         /* Moves items to a horizontal row */
     align-items: center;   /* Vertically aligns text with the middle of the image */
     gap: 30px;            /* Adds space between the image and the text */
-    max-width: 900px;      /* Keeps the content from stretching too wide */
+    max-width: 900px;      
     margin: 0 auto;        /* Centers the whole container on the page */
     padding: 40px 20px;
   }
@@ -191,7 +196,65 @@ object-position: 90% 60%;
     object-position: center top; /* From our previous adjustment */
     flex-shrink: 0;             /* Prevents the image from getting squashed */
   }
+
+  .hero-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 40px; /* Space between text and the line */
+  }
   
   .hero-text h1 {
     margin-bottom: 10px;
+  }
+
+  /* Layout Positioning */
+.portfolio-layout {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+  
+  .side-nav {
+    position: sticky;
+    top: 100px; /* Aligns it below your navbar */
+    height: fit-content;
+    width: 150px;
+    display: block;
+  }
+  
+  .main-wrapper {
+    flex: 1; /* Takes up the remaining space */
+  }
+  
+  /* Sidebar Links */
+  .side-link {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #666;
+    transition: 0.3s;
+  }
+  
+  .side-link.active {
+    color: #000;
+    font-weight: 600;
+    border-left: 2px solid #000;
+    padding-left: 15px;
+  }
+  
+  /* The Horizontal Line */
+  .section-divider {
+    border: 0;
+    border-top: 1px solid #eaeaea;
+    margin: 60px 0;
+    width: 100%;
+  }
+  
+  .tag-assembly {
+    /* This specific tag can be targeted in your dark mode JS */
+    padding: 4px 10px;
+    background: #f0f0f0;
+    border-radius: 4px;
   }

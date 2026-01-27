@@ -16,7 +16,7 @@
         <ul class="nav-links">
             <li><a href="#projects">Projects</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="assets\personal\Final Draft Resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="assets/personal/Final Draft Resume.pdf" target="_blank">Resume</a></li>
             <li>
                 <button id="theme-toggle" aria-label="Toggle Dark Mode">
                     <img id="theme-icon" src="assets/website/night-mode.png" alt="Theme Icon" width="24" height="24">
@@ -24,50 +24,68 @@
             </li>
         </ul>
     </nav>
-    <header class="hero-container">
-        <img id="profile-pic" src="assets/personal/profile.jpg" alt="Profile" class="profile-pic">
+
+    <div class="portfolio-layout">
         
-        <div class="hero-text">
-            <h1>Hi, I'm <span class="highlight">Fisher Munson-Warnken</span>.</h1>
-            <p>A Computer Science student focused on building clean, functional software.</p>
-        </div>
-    </header>
+        <aside class="side-nav">
+            <ul>
+                <li><a href="#hero" class="side-link active">Home</a></li>
+                <li><a href="#projects" class="side-link">Projects</a></li>
+                <li><a href="#about" class="side-link">About</a></li>
+            </ul>
+        </aside>
 
-
-
-    <main id="projects" class="container">
-        <h2 class="section-title">Selected Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <div class="card-content">
-                    <h3>Project Title</h3>
-                    <p>A brief description of the problem you solved. Mention tech like Python, Java, or C++.</p>
-                    <div class="tags">
-                        <span>Assembly</span> <!--#target this so that switching to dark mode changes font-->
-                        <span>CPSC 213</span>
-                    </div>
-                    <a href="#" class="project-link">View Code →</a>
+        <div class="main-wrapper">
+            <header id="hero" class="hero-container">
+                <img id="profile-pic" src="assets/personal/profile.jpg" alt="Profile" class="profile-pic">
+                
+                <div class="hero-text">
+                    <h1>Hi, I'm <span class="highlight">Fisher Munson-Warnken</span>.</h1>
+                    <p>A Computer Science student focused on building clean, functional software.</p>
                 </div>
-            </div>
+            </header>
 
-            <div class="project-card">
-                <div class="card-content">
-                    <h3>Machine Learning Model</h3>
-                    <p>Analyzing datasets using Pandas and Scikit-Learn to predict outcomes.</p>
-                    <div class="tags">
-                        <span>Python</span>
-                        <span>Pandas</span>
+            <hr class="section-divider"> <main id="projects" class="container">
+                <h2 class="section-title">Selected Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="card-content">
+                            <h3>CPSC 213 Project</h3>
+                            <p>Low-level systems work exploring memory representation and assembly language.</p>
+                            <div class="tags">
+                                <span class="tag-assembly">Assembly</span>
+                                <span>CPSC 213</span>
+                            </div>
+                            <a href="#" class="project-link">View Code →</a>
+                        </div>
                     </div>
-                    <a href="#" class="project-link">View Case Study →</a>
-                </div>
-            </div>
-        </div>
-    </main>
 
-    <footer class="footer">
-        <p>&copy; 2026 Built by Your Name</p>
-    </footer>
+                    <div class="project-card">
+                        <div class="card-content">
+                            <h3>Machine Learning Model</h3>
+                            <p>Analyzing datasets using Pandas and Scikit-Learn to predict outcomes.</p>
+                            <div class="tags">
+                                <span>Python</span>
+                                <span>Pandas</span>
+                            </div>
+                            <a href="#" class="project-link">View Case Study →</a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            
+            <section id="about" class="container">
+                <h2 class="section-title">About</h2>
+                <p>Add your bio content here...</p>
+            </section>
+
+            <footer class="footer">
+                <p>&copy; 2026 Built by Fisher Munson-Warnken</p>
+            </footer>
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
-</body>
 
+</body>
 </html>
