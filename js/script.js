@@ -30,3 +30,37 @@ toggleBtn.addEventListener('click', () => {
     // If it's currently dark, set it to light. If not, set it to dark.
     setTheme(isDark ? 'light' : 'dark');
 });
+
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('header[id], section[id], main[id]');
+    const navLinks = document.querySelectorAll('.side-link');
+
+    const observerOptions = {
+        root: null, // use the browser viewport
+        rootMargin: '0px',
+        threshold: 0.3 // Trigger when 30% of the section is visible
+    };
+
+    const observerCallback = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Remove 'active' class from all links
+                navLinks.forEach(link => link.classList.remove('active'));
+
+                // Find the link that matches the ID of the section in view
+                const id = entry.target.getAttribute('id');
+                const activeLink = document.querySelector(`.side-link[href="#${id}"]`);
+                
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Tell the observer to watch each section
+    sections.forEach(section => observer.observe(section));
+});
