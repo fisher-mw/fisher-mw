@@ -1,5 +1,4 @@
 ## Hello, I'm Fisher Munson-Warnken! 
-# I am a Computer Science and Statistics Student interested in approximating non-determinsitc problems with numerical methods.
 
 <!--
 **fisher-mw/fisher-mw** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
