@@ -80,7 +80,7 @@ body {
 
 .highlight {
     color: var(--accent-color);
-}
+ }
 
 /* 5. Project Grid */
 .container {
@@ -114,7 +114,7 @@ body {
 
 .project-photos {
     border-radius: var(--border-radius);
-    width: 100%;    
+    width: 100%;
     height: 300px;
 }
 
@@ -124,6 +124,7 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
 .tags {
     margin: 15px 0;
     display: flex;
@@ -193,41 +194,25 @@ body.dark-mode {
 
 
 #profile-pic {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 350px;
+    border-radius: 12px;
     object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #333;
-    object-position: 90% 60%;
 }
 
 .hero-container {
     display: flex;
-    /* Moves items to a horizontal row */
     align-items: center;
-    /* Vertically aligns text with the middle of the image */
     gap: 30px;
-    /* Adds space between the image and the text */
     max-width: 900px;
     margin: 0 auto;
-    /* Centers the whole container on the page */
     padding: 40px 20px;
 }
+
 .container-wide {
-    max-width: 1300px; /* Increased from 1000px */
+    max-width: 1300px;
     margin: 50px auto;
     padding: 0 40px;
-}
-
-.profile-pic {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center top;
-    /* From our previous adjustment */
-    flex-shrink: 0;
-    /* Prevents the image from getting squashed */
 }
 
 .hero-container {
@@ -239,19 +224,20 @@ body.dark-mode {
 
 .hero-text h1 {
     margin-bottom: 10px;
+    
 }
 
 /* Layout Positioning */
 .portfolio-layout {
     display: flex;
     width: 100%;
-    justify-content: flex-start; 
+    justify-content: flex-start;
 }
 
 .side-nav {
-    position: sticky; 
-    top: 80px; 
-    height: calc(100vh - 80px); 
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 80px);
     padding: 30px;
     width: 75px;
     flex-shrink: 0;
@@ -262,7 +248,8 @@ body.dark-mode {
 .main-wrapper {
     flex-grow: 1;
     padding: 40px;
-    margin: 0 auto; /* This is the magic line that centers the content */
+    margin: 0 auto;
+    /* This is the magic line that centers the content */
 }
 
 .side-link {
@@ -291,4 +278,15 @@ body.dark-mode {
     padding: 4px 10px;
     background: #f0f0f0;
     border-radius: 4px;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center; 
+    gap: 30px;         
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+
+    width: 1000px;
+    margin: 0 auto;
 }
