@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
 html {
     scroll-behavior: smooth;
 }
@@ -332,4 +335,35 @@ body.dark-mode {
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
     }
+}
+/* Animated intro text*/
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.txt {
+  display: flex;
+  flex-wrap: wrap;
+  color: #2b2525;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.txt span {
+  white-space: pre;
+  opacity: 0;
+  transform: translate(-2px, 4px) scale(0.9);
+  filter: blur(6px);
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+    filter: blur(0);
+  }
 }

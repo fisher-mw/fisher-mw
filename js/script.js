@@ -57,3 +57,44 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver(observerCallback, observerOptions);
     sections.forEach(section => observer.observe(section));
 });
+
+/* Animated text*/
+document.addEventListener("DOMContentLoaded", () => {
+  const txtElement = document.querySelector(".txt");
+
+  const phrases = [
+    "Computer Science Student",
+    "Math & Stats Enthusiast",
+    "Powerlifting Programmer",
+    "Builder of Cool Things",
+    "UBC CS Student"
+  ];
+
+  let phraseIndex = 0;
+
+  const animateText = (text) => {
+    txtElement.textContent = "";
+
+    text.split("").forEach((char, index) => {
+      const span = document.createElement("span");
+      span.textContent = char;
+      span.style.animationDelay = `${index * 0.08}s`;
+      span.style.display = char === " " ? "inline-block" : "inline";
+      txtElement.appendChild(span);
+    });
+  };
+
+  const loopText = () => {
+    animateText(phrases[phraseIndex]);
+
+    const animationDuration =
+      phrases[phraseIndex].length * 80 + 1200;
+
+    setTimeout(() => {
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      loopText();
+    }, animationDuration);
+  };
+
+  loopText();
+});
