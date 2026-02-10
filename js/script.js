@@ -63,11 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const txtElement = document.querySelector(".txt");
 
   const phrases = [
-    "Computer Science Student",
-    "Math & Stats Enthusiast",
-    "Powerlifting Programmer",
-    "Builder of Cool Things",
-    "UBC CS Student"
+    "UBC Computer Science and Statistics Student.",
+    "Mathematics Enthusiast.",
+    "Alpine skier, rock climber, and brazilian jujitsu athelete.",
+    "Developer"
   ];
 
   let phraseIndex = 0;
