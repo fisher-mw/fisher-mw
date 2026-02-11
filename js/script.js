@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "UBC Computer Science and Statistics Student.",
     "Mathematics Enthusiast.",
     "Alpine skier, rock climber, and brazilian jujitsu athelete.",
-    "Developer"
+    "Developer."
   ];
 
   let phraseIndex = 0;
