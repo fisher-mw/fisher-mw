@@ -15,6 +15,7 @@ html {
     --border-radius: 12px;
     --max-width: 1000px;
     --nav-bg: #666666;
+    --animate-color: #1a1a1a
 }
 
 /* 2. Reset & Basics */
@@ -175,7 +176,9 @@ body.dark-mode {
     --secondary-text: #94a3b8;
     --card-bg: #1e293b;
     --accent-color: #6e7b80;
-    --nav-bg: #1e293b;
+    --nav-bg: #3d4d67;
+    --color: #94a3b8;
+    --animate-color: #94a3b8;
 
 }
 
@@ -352,7 +355,7 @@ body.dark-mode {
 
 .txt {
   flex-wrap: wrap;
-  color: #2b2525;
+  color: var(--animate-color);
   font-size: 20px;
   cursor: pointer;
 }
