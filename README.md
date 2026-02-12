@@ -1,4 +1,7 @@
 ## Hello, I'm Fisher Munson-Warnken! 
+- I am currently working on a journal aplication that aims to model the way the human brain connects ideas. 
+- Please feel free to reach out to me at fishermunsonwarnken@gmail.com for inquiries
+View www.fishermw.com to learn more.
 
 <!--
 **fisher-mw/fisher-mw** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
