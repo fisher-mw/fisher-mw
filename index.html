@@ -17,7 +17,7 @@
     <nav class="navbar">
         <div class="logo">Fisher M-W</div>
         <ul class="nav-links">
-            <a href="mailto:fishermunsonwarnken@gmail.com?subject=Portfolio%20Inquiry">Contact</a>
+            <li><a href="#" id="contact-trigger">Contact</a>
             </li>
             <li><a href="assets\personal\Resume.pdf" target="_blank">Resume</a></li>
             <li>
@@ -64,20 +64,23 @@
 
                             <br><br>
 
+                            I am currently collaborating on Release, a mobile application dedicated to reducing screen
+                            time and cultivating real-world engagement.
+                            We have developed a full-stack proof of concept using React and Firebase, featuring secure
+                            encryption and real-time user interaction. Currently, we are migrating the architecture to
+                            a native mobile environment. We are on track to launch on both the Google Play Store and
+                            Apple App Store in the coming months.
+                            <br><br>
                             Outside of programming and academics, I am a powerlifter, skier, climber, and Brazilian
                             jiu-jitsu athlete. I love to move my body and spend time outdoors.
                             I find that balancing technical problem-solving with physical activity improves my
                             productivity.
                             I am also an avid reader, movie watcher, and music enthusiast (strictly listening, though I
-                            do play a bit of trumpet).
-
-                            <br><br>
-
-                            I am currently working on an arts and culture journal to log works that have inspired me,
-                            featuring a graph implementation with nodes representing bodies of work and edges connecting
-                            the keywords I have used to describe them.
-                            I also enjoy board games such as chess, Magic: The Gathering, and Settlers of Catan, though
+                            do play a bit of trumpet).I enjoy board games such as chess, Magic: The Gathering, and
+                            Settlers of Catan, though
                             any game that requires a certain level of neural recruitment will get me invested.
+
+
                         </p>
                     </div>
                     <div class="hobby-grid">
@@ -118,7 +121,8 @@
                         <div class="card-content">
                             <h3>Crash Tested</h3>
                             <p>A machine learning model built to predict the likelihood of an economic recession in
-                                Metro Vancouver. Trained using a random forest classifier on Vancouver business
+                                Metro Vancouver. We trained the model using a random forest classifier on Vancouver
+                                business
                                 data from the past 20 years.
                                 The model won second place in UBC's Datathon, fall 2025. </p>
 
@@ -160,7 +164,7 @@
                             <p>
                                 A predictive model used to assess the likelihood of a player on the UBC Minecraft server
                                 subscribing to a weekly newsletter. Motivated by the need to
-                                identify what types of players were most engaged with the server. Trained the model on
+                                identify what types of players were most engaged with the server. I trained the model on
                                 various metrics pulled from server API and used kNN algorithm to classify target
                                 variable.
                             </p>
@@ -269,7 +273,40 @@
 
 
     <script src="js/script.js"></script>
+<div id="contact-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
 
+        <div id="form-container">
+            <h2>Get in Touch</h2>
+            <p>Have a project in mind or just want to chat? Drop me a message.</p>
+
+            <form action="https://formspree.io/f/mjgejrlk" method="POST" id="contact-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="_replyto" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="send-button">
+                    <span id="button-text">Send Message</span>
+                </button>
+            </form>
+        </div>
+
+        <div id="form-success" style="display: none; text-align: center;">
+            <h3>Message Sent!</h3>
+            <p>Fisher will get back to you soon.</p>
+            <a href="#" id="send-another"
+                style="color: var(--accent-color); text-decoration: underline; cursor: pointer; display: block; margin-top: 10px;">
+                Send another message
+            </a>
+        </div>
+    </div>
+</div>
 </body>
 
 </html>
