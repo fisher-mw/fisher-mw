@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "A developer building for digital wellness.",
         "UX/UI designer.",
         "Alpine skier, rock climber, and Brazilian Ju-Jitsu athelete.",
-        "Problem solver."
+        "Enjoyer of Random Forests (and Random Walks...)."
     ];
 
     let phraseIndex = 0;
