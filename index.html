@@ -3,6 +3,19 @@
 
 <head>
 
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    </script>
+
     <link rel="icon" type="image/png" href="assets\website\favicon-96x96.png" sizes="96x96" />
 
     <meta charset="UTF-8">
@@ -41,7 +54,8 @@
         <div class="main-wrapper">
             <div class="profile-card">
                 <header id="hero" class="hero-container">
-                    <img id="profile-pic" src="assets\personal\wab5enxgtchdbrlpavpc.avif" alt="Profile" class="profile-pic">
+                    <img id="profile-pic" src="assets\personal\wab5enxgtchdbrlpavpc.avif" alt="Profile"
+                        class="profile-pic">
 
                     <div class="hero-text">
                         <h1>Hi, I'm <span class="highlight">Fisher Munson-Warnken</span>.</h1>
@@ -105,7 +119,7 @@
                                 finding short term housing as a UBC student.
                                 Won most likely to be a startup at HackCamp, fall 2024.</p>
 
-                            <img id="cribs" src="assets\projects\UX_UI Main.png" class="project-photos">
+                            <img id="cribs" src="assets\projects\UX_UI Main.png" class="project-photos" loading="lazy">
                             <div class="tags">
                                 <span class="tag-assembly">Python</span>
                                 <span>UX/UI</span>
@@ -126,7 +140,8 @@
                                 data from the past 20 years.
                                 The model won second place in UBC's Datathon, fall 2025. </p>
 
-                            <img id="cribs" src="assets\projects\business_vulnerability.png" class="project-photos">
+                            <img id="cribs" src="assets\projects\business_vulnerability.png" class="project-photos"
+                                loading="lazy">
 
                             <div class="tags">
                                 <span>Python</span>
@@ -148,7 +163,8 @@
                                 Implemented state save and load methods through JSON
                                 configuration.
                             </p>
-                            <img id="normal model" src="assets\projects\normality.png" class="project-photos">
+                            <img id="normal model" src="assets\projects\normality.png" class="project-photos"
+                                loading="lazy">
                         </div>
                         <div class="tags">
                             <span>Java</span>
@@ -168,7 +184,8 @@
                                 various metrics pulled from server API and used kNN algorithm to classify target
                                 variable.
                             </p>
-                            <img id="minecraft" src="assets\projects\choose_k_img.svg" class="project-photos">
+                            <img id="minecraft" src="assets\projects\choose_k_img.svg" class="project-photos"
+                                loading="lazy">
                         </div>
                         <div class="tags">
                             <span>R-Studio</span>
@@ -273,40 +290,40 @@
 
 
     <script src="js/script.js"></script>
-<div id="contact-modal" class="modal">
-    <div class="modal-content">
-        <span class="close-button">&times;</span>
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
 
-        <div id="form-container">
-            <h2>Get in Touch</h2>
-            <p>Have a project in mind or just want to chat? Drop me a message.</p>
+            <div id="form-container">
+                <h2>Get in Touch</h2>
+                <p>Have a project in mind or just want to chat? Drop me a message.</p>
 
-            <form action="https://formspree.io/f/mjgejrlk" method="POST" id="contact-form">
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="_replyto" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="send-button">
-                    <span id="button-text">Send Message</span>
-                </button>
-            </form>
-        </div>
+                <form action="https://formspree.io/f/mjgejrlk" method="POST" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="_replyto" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="send-button">
+                        <span id="button-text">Send Message</span>
+                    </button>
+                </form>
+            </div>
 
-        <div id="form-success" style="display: none; text-align: center;">
-            <h3>Message Sent!</h3>
-            <p>Fisher will get back to you soon.</p>
-            <a href="#" id="send-another"
-                style="color: var(--accent-color); text-decoration: underline; cursor: pointer; display: block; margin-top: 10px;">
-                Send another message
-            </a>
+            <div id="form-success" style="display: none; text-align: center;">
+                <h3>Message Sent!</h3>
+                <p>Fisher will get back to you soon.</p>
+                <a href="#" id="send-another"
+                    style="color: var(--accent-color); text-decoration: underline; cursor: pointer; display: block; margin-top: 10px;">
+                    Send another message
+                </a>
+            </div>
         </div>
     </div>
-</div>
 </body>
 
 </html>
