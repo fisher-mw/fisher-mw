@@ -103,21 +103,36 @@ body {
 }
 
 
-.project-card {
-    background: var(--card-bg);
-    border-radius: var(--border-radius);
-    padding: 30px;
-    transition: transform 0.3s ease;
-}
 
 .project-card:hover {
     transform: translateY(-5px);
 }
 
+.project-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    transition: transform 0.3s ease;
+    display: flex; 
+    flex-direction: column;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Forces the content wrapper to stretch the full height of the card */
+}
+
+/* Update this existing class */
 .project-photos {
     border-radius: var(--border-radius);
     width: 100%;
     height: 300px;
+    
+    /* ADD THESE THREE LINES */
+    object-fit: cover;       /* Prevents images from stretching weirdly */
+    object-position: center; /* Keeps the crop centered */
+    margin-top: auto;        /* THE MAGIC LINE: Pushes the image down to align perfectly */
 }
 /* Work experience project cell */
 .job-list {
