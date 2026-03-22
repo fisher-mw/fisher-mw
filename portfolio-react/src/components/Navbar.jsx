@@ -1,0 +1,123 @@
+import { useState } from 'react'
+
+const navLinks = [
+  { label: '01. About', href: '#about' },
+  { label: '02. Projects', href: '#projects' },
+  { label: '03. Work', href: '#work' },
+]
+
+function SunIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+      <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+    </svg>
+  )
+}
+
+function MoonIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+      <path fillRule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clipRule="evenodd" />
+    </svg>
+  )
+}
+
+export default function Navbar({ dark, toggleDark, onContactClick }) {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-100 dark:border-slate-800/80 transition-colors duration-300">
+      <div className="section-inner h-16 flex items-center justify-between">
+
+        {/* Logo */}
+        <a href="#hero" className="font-bold text-slate-900 dark:text-white tracking-tight hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+          Fisher MW
+        </a>
+
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center gap-1">
+          {navLinks.map(({ label, href }) => (
+            <a
+              key={href}
+              href={href}
+              className="px-3 py-1.5 text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors rounded-md hover:bg-indigo-50 dark:hover:bg-indigo-950/40"
+            >
+              <span className="text-indigo-500 dark:text-indigo-400 font-mono text-xs mr-0.5">
+                {label.split('.')[0]}.
+              </span>
+              {label.split('. ')[1]}
+            </a>
+          ))}
+
+          <div className="w-px h-4 bg-slate-200 dark:bg-slate-700 mx-2" />
+
+          <a
+            href="/personal/Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-1.5 text-sm font-semibold text-indigo-600 dark:text-indigo-400 border border-indigo-400 dark:border-indigo-500 rounded-md hover:bg-indigo-50 dark:hover:bg-indigo-950/40 transition-colors"
+          >
+            Resume ↗
+          </a>
+
+          <button
+            onClick={onContactClick}
+            className="ml-1 px-4 py-1.5 text-sm font-semibold bg-indigo-600 dark:bg-indigo-500 text-white rounded-md hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-colors"
+          >
+            Contact
+          </button>
+
+          <button
+            onClick={toggleDark}
+            aria-label="Toggle theme"
+            className="ml-2 w-8 h-8 flex items-center justify-center rounded-full text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+          >
+            {dark ? <SunIcon /> : <MoonIcon />}
+          </button>
+        </nav>
+
+        {/* Mobile right side */}
+        <div className="md:hidden flex items-center gap-2">
+          <button onClick={toggleDark} aria-label="Toggle theme" className="w-8 h-8 flex items-center justify-center text-slate-500 dark:text-slate-400">
+            {dark ? <SunIcon /> : <MoonIcon />}
+          </button>
+          <button
+            onClick={() => setOpen((o) => !o)}
+            aria-label="Toggle menu"
+            className="p-1.5 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-md transition-colors"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+              {open
+                ? <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                : <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />}
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      {open && (
+        <div className="md:hidden border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 py-5 flex flex-col gap-3">
+          {navLinks.map(({ label, href }) => (
+            <a
+              key={href}
+              href={href}
+              onClick={() => setOpen(false)}
+              className="text-sm font-medium text-slate-600 dark:text-slate-400 py-1"
+            >
+              {label}
+            </a>
+          ))}
+          <div className="border-t border-slate-100 dark:border-slate-800 pt-3 flex flex-col gap-2">
+            <a href="/personal/Resume.pdf" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-indigo-600 dark:text-indigo-400">
+              Resume ↗
+            </a>
+            <button onClick={() => { onContactClick(); setOpen(false) }} className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 text-left">
+              Contact
+            </button>
+          </div>
+        </div>
+      )}
+    </header>
+  )
+}

@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-slate-900 font-sans antialiased;
+  }
+
+  .dark body {
+    @apply bg-slate-900 text-slate-100;
+  }
+}
+
+@layer utilities {
+  /* Gradient name text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent;
+  }
+
+  /* Full-width section wrapper with max-width content */
+  .section-inner {
+    @apply max-w-6xl mx-auto px-6 sm:px-10 lg:px-16;
+  }
+}
+
+/* ─── Hero dot-grid: applied directly to the section element (full-width) ─── */
+.hero-bg {
+  background-image: radial-gradient(circle, #c7d2fe 1.5px, transparent 1.5px);
+  background-size: 30px 30px;
+}
+.dark .hero-bg {
+  background-image: radial-gradient(circle, rgba(99, 102, 241, 0.12) 1.5px, transparent 1.5px);
+  background-size: 30px 30px;
+}
+
+/* ─── Animated rotating text ─── */
+@keyframes charIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.92);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.animated-char {
+  display: inline-block;
+  opacity: 0;
+  animation: charIn 0.2s ease-out forwards;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { @apply bg-slate-300 dark:bg-slate-700 rounded-full; }
