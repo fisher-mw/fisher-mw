@@ -10,9 +10,8 @@ const hobbyImages = [
 ]
 
 const skills = [
-  'Python', 'Java', 'R', 'JavaScript',
-  'React', 'React Native', 'Firebase',
-  'Pandas', 'Scikit-Learn', 'Figma', 'Git', 'Tailwind CSS',
+  'Python', 'Java', 'C/C++', 'R', 'JavaScript',
+  'React',  'Pandas', 'Scikit-Learn', 'Figma', 'Git', 'Tailwind CSS'
 ]
 
 export default function About() {
@@ -43,9 +42,7 @@ export default function About() {
                 <p>
                   I'm currently building{' '}
                   <span className="text-neutral-800 dark:text-zinc-200 font-semibold">Release</span>
-                  {' '}— a mobile app dedicated to reducing passive screen time. Started
-                  as React + Firebase, now migrating to fully native code ahead of App
-                  Store and Play Store launches.
+                  , an app designed to promote the act of disconnecting from our phones through social reinforcement.  
                 </p>
                 <p>
                   Outside of tech I'm into powerlifting, skiing, climbing, and Brazilian
@@ -54,18 +51,7 @@ export default function About() {
               </div>
 
               <div className="mt-8">
-                <p className="text-xs font-semibold uppercase tracking-widest text-neutral-400 dark:text-zinc-500 mb-3">
-                  Technologies
-                </p>
                 <div className="flex flex-wrap gap-2">
-                  {skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 text-xs font-medium rounded-full bg-neutral-100 dark:bg-zinc-800 text-neutral-700 dark:text-zinc-300 border border-neutral-200 dark:border-zinc-700 hover:border-indigo-400 hover:text-indigo-600 dark:hover:border-indigo-500 dark:hover:text-indigo-400 transition-colors cursor-default"
-                    >
-                      {skill}
-                    </span>
-                  ))}
                 </div>
               </div>
             </FadeIn>
