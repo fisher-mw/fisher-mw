@@ -1,7 +1,6 @@
 import { projects } from '../data/projects'
 import FadeIn from './FadeIn'
 
-// ── Small chip tag ──
 function Tag({ label }) {
   return (
     <span className="px-2.5 py-1 text-xs font-mono font-medium rounded-md bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-300 border border-indigo-100 dark:border-indigo-900/60">
@@ -10,7 +9,6 @@ function Tag({ label }) {
   )
 }
 
-// ── Trophy icon ──
 function TrophyIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 shrink-0">
@@ -19,7 +17,6 @@ function TrophyIcon() {
   )
 }
 
-// ── External link icon ──
 function ExternalLinkIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
@@ -28,27 +25,25 @@ function ExternalLinkIcon() {
   )
 }
 
-// ── Featured project — full-width card, alternating image side ──
 function FeaturedProject({ project, index }) {
   const flip = index % 2 === 1
 
   return (
     <FadeIn delay={index * 100}>
-      <article className="group grid lg:grid-cols-5 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700/60 bg-white dark:bg-slate-800/50 hover:shadow-2xl hover:shadow-slate-200/60 dark:hover:shadow-slate-900/60 hover:-translate-y-1 transition-all duration-500">
+      <article className="group grid lg:grid-cols-5 rounded-2xl overflow-hidden border border-neutral-200 dark:border-zinc-700/60 bg-white dark:bg-zinc-800/40 hover:-translate-y-1 hover:shadow-2xl hover:shadow-neutral-200/60 dark:hover:shadow-zinc-950/60 transition-all duration-500">
 
-        {/* Image — 3 of 5 cols */}
-        <div className={`relative lg:col-span-3 h-64 sm:h-80 lg:h-auto overflow-hidden bg-slate-100 dark:bg-slate-800 ${flip ? 'lg:order-last' : ''}`}>
+        {/* Image — 3 cols */}
+        <div className={`relative lg:col-span-3 h-64 sm:h-80 lg:h-auto overflow-hidden bg-neutral-100 dark:bg-zinc-800 ${flip ? 'lg:order-last' : ''}`}>
           <img
             src={project.image}
             alt={project.title}
             loading="lazy"
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
-          {/* Subtle image overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
         </div>
 
-        {/* Content — 2 of 5 cols */}
+        {/* Content — 2 cols */}
         <div className={`lg:col-span-2 flex flex-col justify-center p-8 lg:p-10 ${flip ? 'lg:order-first' : ''}`}>
           <p className="font-mono text-xs text-indigo-500 dark:text-indigo-400 mb-2 uppercase tracking-wider">
             Featured Project
@@ -61,11 +56,11 @@ function FeaturedProject({ project, index }) {
             </div>
           )}
 
-          <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
+          <h3 className="text-2xl font-bold text-neutral-900 dark:text-zinc-50 mb-4">
             {project.title}
           </h3>
 
-          <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6">
+          <p className="text-sm text-neutral-500 dark:text-zinc-400 leading-relaxed mb-6">
             {project.description}
           </p>
 
@@ -88,13 +83,11 @@ function FeaturedProject({ project, index }) {
   )
 }
 
-// ── Smaller project card for non-featured ──
 function ProjectCard({ project, index }) {
   return (
     <FadeIn delay={index * 80}>
-      <article className="group flex flex-col h-full bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700/60 overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-200/50 dark:hover:shadow-slate-900/50 transition-all duration-300">
-
-        <div className="overflow-hidden h-48 bg-slate-100 dark:bg-slate-800 shrink-0">
+      <article className="group flex flex-col h-full bg-white dark:bg-zinc-800/40 rounded-2xl border border-neutral-200 dark:border-zinc-700/60 overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:shadow-neutral-200/50 dark:hover:shadow-zinc-950/50 transition-all duration-300">
+        <div className="overflow-hidden h-48 bg-neutral-100 dark:bg-zinc-800 shrink-0">
           <img
             src={project.image}
             alt={project.title}
@@ -102,12 +95,11 @@ function ProjectCard({ project, index }) {
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
-
         <div className="flex flex-col flex-1 p-6 gap-3">
-          <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+          <h3 className="text-lg font-semibold text-neutral-900 dark:text-zinc-50">
             {project.title}
           </h3>
-          <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed flex-1">
+          <p className="text-sm text-neutral-500 dark:text-zinc-400 leading-relaxed flex-1">
             {project.description}
           </p>
           <div className="flex flex-wrap gap-1.5">
@@ -132,35 +124,29 @@ export default function Projects() {
   const others = projects.slice(2)
 
   return (
-    <section id="projects" className="py-28 bg-white dark:bg-slate-900 transition-colors duration-300">
+    <section id="projects" className="py-28 bg-neutral-50 dark:bg-zinc-950 transition-colors duration-300">
       <div className="section-inner">
 
         <FadeIn>
           <p className="font-mono text-sm text-indigo-500 dark:text-indigo-400 mb-2">02. Projects</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-14">
+          <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-zinc-50 mb-14">
             Things I've built
           </h2>
         </FadeIn>
 
-        {/* Featured */}
         <div className="space-y-8 mb-12">
-          {featured.map((project, i) => (
-            <FeaturedProject key={project.id} project={project} index={i} />
-          ))}
+          {featured.map((p, i) => <FeaturedProject key={p.id} project={p} index={i} />)}
         </div>
 
-        {/* Other projects */}
         {others.length > 0 && (
           <>
             <FadeIn>
-              <p className="text-sm font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-6">
+              <p className="text-sm font-semibold uppercase tracking-widest text-neutral-400 dark:text-zinc-500 mb-6">
                 Other Noteworthy Projects
               </p>
             </FadeIn>
             <div className="grid sm:grid-cols-2 gap-6">
-              {others.map((project, i) => (
-                <ProjectCard key={project.id} project={project} index={i} />
-              ))}
+              {others.map((p, i) => <ProjectCard key={p.id} project={p} index={i} />)}
             </div>
           </>
         )}

@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Projects from './components/Projects'
 import Work from './components/Work'
+import Activity from './components/Activity'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ContactModal from './components/ContactModal'
@@ -14,9 +15,7 @@ export default function App() {
   const [contactOpen, setContactOpen] = useState(false)
 
   return (
-    // Each section manages its own full-width background.
-    // No max-width wrapper here — that lives inside each section.
-    <div className="min-h-screen bg-white dark:bg-slate-900 transition-colors duration-300">
+    <div className="min-h-screen bg-neutral-50 dark:bg-zinc-950 transition-colors duration-300">
       <Navbar
         dark={dark}
         toggleDark={() => setDark((d) => !d)}
@@ -27,8 +26,9 @@ export default function App() {
       <About />
       <Projects />
       <Work />
+      <Activity />
       <Contact onContactClick={() => setContactOpen(true)} />
-      <Footer onContactClick={() => setContactOpen(true)} />
+      <Footer />
 
       <ContactModal isOpen={contactOpen} onClose={() => setContactOpen(false)} />
     </div>

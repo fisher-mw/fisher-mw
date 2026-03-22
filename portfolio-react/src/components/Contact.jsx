@@ -2,17 +2,17 @@ import FadeIn from './FadeIn'
 
 export default function Contact({ onContactClick }) {
   return (
-    <section className="py-32 bg-white dark:bg-slate-900 transition-colors duration-300">
+    <section className="bg-white dark:bg-zinc-900 py-32 transition-colors duration-300">
       <div className="section-inner">
         <FadeIn>
           <div className="max-w-2xl mx-auto text-center">
             <p className="font-mono text-sm text-indigo-500 dark:text-indigo-400 mb-3">
               04. What's Next?
             </p>
-            <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white mb-6">
+            <h2 className="text-4xl sm:text-5xl font-bold text-neutral-900 dark:text-zinc-50 mb-6">
               Get In Touch
             </h2>
-            <p className="text-slate-500 dark:text-slate-400 leading-relaxed mb-10 text-lg">
+            <p className="text-neutral-500 dark:text-zinc-400 leading-relaxed mb-10 text-lg">
               Whether you have an opportunity, a project idea, or just want to say
               hi — my inbox is always open.
             </p>

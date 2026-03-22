@@ -5,7 +5,7 @@ const phrases = [
   'A developer building for digital wellness.',
   'UX/UI designer.',
   'Alpine skier, rock climber & BJJ athlete.',
-  'Enjoyer of Random Forests (and Random Walks...)',
+  'Enjoyer of Random Forests (and Random Walks)',
 ]
 
 export default function AnimatedText() {

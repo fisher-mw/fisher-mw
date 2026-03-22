@@ -7,35 +7,36 @@
     scroll-behavior: smooth;
   }
 
+  /* Light mode: off-white / grey / black */
   body {
-    @apply bg-white text-slate-900 font-sans antialiased;
+    @apply bg-neutral-50 text-neutral-900 font-sans antialiased;
   }
 
+  /* Dark mode: near-black / dark grey */
   .dark body {
-    @apply bg-slate-900 text-slate-100;
+    @apply bg-zinc-950 text-zinc-100;
   }
 }
 
 @layer utilities {
-  /* Gradient name text */
+  /* Gradient name */
   .gradient-text {
     @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent;
   }
 
-  /* Full-width section wrapper with max-width content */
+  /* Shared max-width content wrapper */
   .section-inner {
     @apply max-w-6xl mx-auto px-6 sm:px-10 lg:px-16;
   }
 }
 
-/* ─── Hero dot-grid: applied directly to the section element (full-width) ─── */
+/* ─── Hero dot-grid: lives on the section element so it spans the full viewport ─── */
 .hero-bg {
-  background-image: radial-gradient(circle, #c7d2fe 1.5px, transparent 1.5px);
+  background-image: radial-gradient(circle, #d4d4d4 1.5px, transparent 1.5px);
   background-size: 30px 30px;
 }
 .dark .hero-bg {
-  background-image: radial-gradient(circle, rgba(99, 102, 241, 0.12) 1.5px, transparent 1.5px);
-  background-size: 30px 30px;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px);
 }
 
 /* ─── Animated rotating text ─── */
@@ -61,4 +62,4 @@
 /* ─── Scrollbar ─── */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { @apply bg-slate-300 dark:bg-slate-700 rounded-full; }
+::-webkit-scrollbar-thumb { @apply bg-neutral-300 dark:bg-zinc-700 rounded-full; }
