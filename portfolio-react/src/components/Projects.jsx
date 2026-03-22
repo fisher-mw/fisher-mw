@@ -29,7 +29,7 @@ function FeaturedProject({ project, index }) {
   const flip = index % 2 === 1
 
   return (
-    <FadeIn delay={index * 100}>
+    <FadeIn delay={index * 150}>
       <article className="group grid lg:grid-cols-5 rounded-2xl overflow-hidden border border-neutral-200 dark:border-zinc-700/60 bg-white dark:bg-zinc-800/40 hover:-translate-y-1 hover:shadow-2xl hover:shadow-neutral-200/60 dark:hover:shadow-zinc-950/60 transition-all duration-500">
 
         {/* Image — 3 cols */}
@@ -85,7 +85,7 @@ function FeaturedProject({ project, index }) {
 
 function ProjectCard({ project, index }) {
   return (
-    <FadeIn delay={index * 80}>
+    <FadeIn delay={index * 120}>
       <article className="group flex flex-col h-full bg-white dark:bg-zinc-800/40 rounded-2xl border border-neutral-200 dark:border-zinc-700/60 overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:shadow-neutral-200/50 dark:hover:shadow-zinc-950/50 transition-all duration-300">
         <div className="overflow-hidden h-48 bg-neutral-100 dark:bg-zinc-800 shrink-0">
           <img

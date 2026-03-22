@@ -27,19 +27,31 @@ export default function Navbar({ dark, toggleDark, onContactClick }) {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-neutral-50/90 dark:bg-zinc-950/90 backdrop-blur-md border-b border-neutral-200/80 dark:border-zinc-800/80 transition-colors duration-300">
-      <div className="section-inner h-16 flex items-center justify-between">
+      {/*
+        Three-column flex layout:
+          [logo]  →  flex-none, left-anchored
+          [links] →  flex-1, centered in remaining space
+          [actions] → flex-none, right-anchored
+        Using px-8/lg:px-16/xl:px-24 with NO max-width cap so the bar
+        always fills the full viewport edge-to-edge.
+      */}
+      <div className="w-full px-8 sm:px-10 lg:px-16 xl:px-24 h-16 flex items-center gap-4">
 
-        <a href="#hero" className="font-bold text-neutral-900 dark:text-zinc-50 tracking-tight hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+        {/* ── Logo ── */}
+        <a
+          href="#hero"
+          className="flex-none font-bold text-base text-neutral-900 dark:text-zinc-50 tracking-tight hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+        >
           Fisher MW
         </a>
 
-        {/* Desktop */}
-        <nav className="hidden md:flex items-center gap-1">
+        {/* ── Center nav links (desktop) — fills space and stays centered ── */}
+        <nav className="hidden md:flex flex-1 items-center justify-center gap-1">
           {navLinks.map(({ label, href }) => (
             <a
               key={href}
               href={href}
-              className="px-3 py-1.5 text-sm font-medium text-neutral-500 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950/40 rounded-md transition-colors"
+              className="px-3.5 py-1.5 text-sm font-medium text-neutral-500 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950/40 rounded-md transition-colors"
             >
               <span className="font-mono text-xs text-indigo-500 dark:text-indigo-400 mr-0.5">
                 {label.split('.')[0]}.
@@ -47,9 +59,10 @@ export default function Navbar({ dark, toggleDark, onContactClick }) {
               {label.split('. ')[1]}
             </a>
           ))}
+        </nav>
 
-          <div className="w-px h-4 bg-neutral-200 dark:bg-zinc-700 mx-2" />
-
+        {/* ── Right actions (desktop) ── */}
+        <div className="hidden md:flex flex-none items-center gap-2 ml-auto">
           <a
             href="/personal/Resume.pdf"
             target="_blank"
@@ -58,25 +71,23 @@ export default function Navbar({ dark, toggleDark, onContactClick }) {
           >
             Resume ↗
           </a>
-
           <button
             onClick={onContactClick}
-            className="ml-1 px-4 py-1.5 text-sm font-semibold bg-indigo-600 dark:bg-indigo-500 text-white rounded-md hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-colors"
+            className="px-4 py-1.5 text-sm font-semibold bg-indigo-600 dark:bg-indigo-500 text-white rounded-md hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-colors"
           >
             Contact
           </button>
-
           <button
             onClick={toggleDark}
             aria-label="Toggle theme"
-            className="ml-2 w-8 h-8 flex items-center justify-center rounded-full text-neutral-500 dark:text-zinc-400 hover:bg-neutral-100 dark:hover:bg-zinc-800 transition-colors"
+            className="w-8 h-8 flex items-center justify-center rounded-full text-neutral-500 dark:text-zinc-400 hover:bg-neutral-100 dark:hover:bg-zinc-800 transition-colors"
           >
             {dark ? <SunIcon /> : <MoonIcon />}
           </button>
-        </nav>
+        </div>
 
-        {/* Mobile */}
-        <div className="md:hidden flex items-center gap-2">
+        {/* ── Mobile right ── */}
+        <div className="md:hidden flex items-center gap-2 ml-auto">
           <button onClick={toggleDark} aria-label="Toggle theme" className="w-8 h-8 flex items-center justify-center text-neutral-500 dark:text-zinc-400">
             {dark ? <SunIcon /> : <MoonIcon />}
           </button>
@@ -94,8 +105,9 @@ export default function Navbar({ dark, toggleDark, onContactClick }) {
         </div>
       </div>
 
+      {/* ── Mobile dropdown ── */}
       {open && (
-        <div className="md:hidden bg-neutral-50 dark:bg-zinc-950 border-t border-neutral-200 dark:border-zinc-800 px-6 py-5 flex flex-col gap-3">
+        <div className="md:hidden bg-neutral-50 dark:bg-zinc-950 border-t border-neutral-200 dark:border-zinc-800 px-8 py-5 flex flex-col gap-3">
           {navLinks.map(({ label, href }) => (
             <a key={href} href={href} onClick={() => setOpen(false)} className="text-sm font-medium text-neutral-600 dark:text-zinc-400 py-1">
               {label}
