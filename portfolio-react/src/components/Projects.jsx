@@ -92,7 +92,8 @@ function ProjectCard({ project, index }) {
             src={project.image}
             alt={project.title}
             loading="lazy"
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${project.imageFit === 'contain' ? 'object-contain p-4' : 'object-cover'}`}
+            style={{ objectPosition: project.imagePosition || 'center', transform: project.imageScale ? `scale(${project.imageScale})` : undefined }}
           />
         </div>
         <div className="flex flex-col flex-1 p-6 gap-3">
@@ -120,8 +121,8 @@ function ProjectCard({ project, index }) {
 }
 
 export default function Projects() {
-  const featured = projects.slice(0, 2)
-  const others = projects.slice(2)
+  const featured = projects.slice(0, 1)
+  const others = projects.slice(1)
 
   return (
     <section id="projects" className="py-28 bg-neutral-50 dark:bg-zinc-950 transition-colors duration-300">
@@ -133,7 +134,7 @@ export default function Projects() {
             Things I've built
           </h2>
         </FadeIn>
-
+        
         <div className="space-y-8 mb-12">
           {featured.map((p, i) => <FeaturedProject key={p.id} project={p} index={i} />)}
         </div>
