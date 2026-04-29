@@ -37,6 +37,11 @@ export const courses = [
 ]
 
 export const jobs = [
+    {
+        company: "Research Assistant · Department of Mathematics",
+        role: "Research in algebraic combinatorics, applying techniques from linear algebra, abstract algebra, and finite field theory to problems in graph theory. ",
+        period: "Summer 2026",
+    },
   {
     company: 'The Spot on the Dock',
     role: 'Line Cook',

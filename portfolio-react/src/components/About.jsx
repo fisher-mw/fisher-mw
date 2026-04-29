@@ -46,7 +46,7 @@ export default function About() {
                 </p>
                 <p>
                   Outside of tech I'm into powerlifting, skiing, climbing, and Brazilian
-                  jiu-jitsu. I enjoy reading, films, and strategy games (chess, MtG, Catan).
+                  jiu-jitsu. I enjoy reading, films, and strategy games (Chess, MtG, Catan).
                 </p>
               </div>
 
