@@ -43,8 +43,21 @@ export const projects = [
     link: 'https://github.com/fisher-mw/Statistical-Inference-CPSC210/tree/main',
     linkLabel: 'View on GitHub',
   },
+
   {
     id: 5,
+    title: 'eXAI: Credit Card Defualt Classifier',
+    description:
+      'Trained an ensemble model to predict if a client will default on their next payment. With the goal of explainability, the model metrics and per-prediction evaluation are made transparent using SHAP analysis.',
+    award: null,
+    tags: ['Python', 'Machine Learning', 'Fullstack'],
+    image: '/projects/default_classifier.png',
+    imageScale: 1.4,
+    link: 'https://cpsc-330-project.vercel.app/predict',
+    linkLabel: 'Link to project',
+  },
+  {
+    id: 6,
     title: 'Minecraft Newsletter Model',
     description:
       'kNN classification model predicting newsletter subscription likelihood for players on the UBC Minecraft server, using API-sourced behavioral metrics.',
