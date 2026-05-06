@@ -3,7 +3,7 @@ export const projects = [
         id: 1, 
         title: 'Release',
         description: 'Social media platform designed to leverage social incentive as a means for reducing screen time. ',
-        tags: ['Fullstack', 'IOS'],
+        tags: ['Full stack', 'IOS'],
         image: "/projects/Cover.svg",
         link: "https://testflight.apple.com/join/9gccQrFr",
         linkLabel: 'External Beta (TestFlight)'
@@ -27,7 +27,7 @@ export const projects = [
       'ML model predicting economic recession likelihood in Metro Vancouver, trained on 20 years of business registration data using a random forest classifier.',
     award: '2nd Place — UBC Datathon Fall 2025',
     tags: ['Python', 'Pandas', 'Scikit-Learn'],
-    image: '/projects/Cream Neutral Minimalist New Business Pitch Deck Presentation.svg',
+    image: '/projects/crash_tested.svg',
     imagePosition: 'top',
     link: 'https://github.com/fisher-mw/dsci-hackathon-2025/tree/main',
     linkLabel: 'View on GitHub',
@@ -46,11 +46,11 @@ export const projects = [
 
   {
     id: 5,
-    title: 'eXAI: Credit Card Defualt Classifier',
+    title: 'eXAI: Credit Card Default Classifier',
     description:
       'Trained an ensemble model to predict if a client will default on their next payment. With the goal of explainability, the model metrics and per-prediction evaluation are made transparent using SHAP analysis.',
     award: null,
-    tags: ['Python', 'Machine Learning', 'Fullstack'],
+    tags: ['Python', 'Machine Learning', 'Full stack'],
     image: '/projects/default_classifier.png',
     imageScale: 1.4,
     link: 'https://cpsc-330-project.vercel.app/predict',

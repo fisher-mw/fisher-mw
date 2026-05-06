@@ -127,32 +127,30 @@ export default function Projects() {
   return (
     <section id="projects" className="py-28 bg-neutral-50 dark:bg-zinc-950 transition-colors duration-300">
       <div className="section-inner">
-
         <FadeIn>
           <p className="font-mono text-sm text-indigo-500 dark:text-indigo-400 mb-2">02. Projects</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-zinc-50 mb-14">
             Things I've built
           </h2>
         </FadeIn>
-        
+
         <div className="space-y-8 mb-12">
           {featured.map((p, i) => <FeaturedProject key={p.id} project={p} index={i} />)}
         </div>
+      </div>
 
-        {others.length > 0 && (
-          <>
-            <FadeIn>
+      {others.length > 0 && (
+        <>
+          <div className="px-6 sm:px-10 lg:px-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <FadeIn className="sm:col-span-2 lg:col-span-3">
               <p className="text-sm font-semibold uppercase tracking-widest text-neutral-400 dark:text-zinc-500 mb-6">
                 Other Noteworthy Projects
               </p>
             </FadeIn>
-            <div className="grid sm:grid-cols-2 gap-6">
-              {others.map((p, i) => <ProjectCard key={p.id} project={p} index={i} />)}
-            </div>
-          </>
-        )}
-
-      </div>
+            {others.map((p, i) => <ProjectCard key={p.id} project={p} index={i} />)}
+          </div>
+        </>
+      )}
     </section>
   )
 }

@@ -4,6 +4,12 @@ export const courses = [
     name: 'Applied Machine Learning',
     link: 'https://ubc-cs.github.io/cpsc330-2025S1/syllabus.html',
   },
+
+  {
+    code: 'CPSC 304',
+    name: 'Relational Databases', 
+    link: 'https://www.cs.ubc.ca/~hkhosrav/Courses/CPSC304/2016S1/course-info/info_course_outline.htm'
+  }, 
   {
     code: 'CPSC 221',
     name: 'Data Structures and Algorithms',
@@ -19,6 +25,7 @@ export const courses = [
     name: 'Principles of Software Design',
     link: 'https://www.cs.ubc.ca/course-section/cpsc-210-101-2023w',
   },
+
   {
     code: 'MATH 307',
     name: 'Applied Linear Algebra',
@@ -33,6 +40,11 @@ export const courses = [
     code: 'MATH 200',
     name: 'Multivariable Calculus',
     link: 'https://oldwww.math.ubc.ca/php/MathNet/courseinfo.php?session=2021S&t=outline&name=200:921',
+  },
+  {
+    code: 'STAT 306',
+    name: 'Finding Relationships in Data',
+    link: 'https://www.stat.ubc.ca/sites/default/files/course_outlines/syllabus_stat_306_w2_2023_revised.pdf'
   },
 ]
 
