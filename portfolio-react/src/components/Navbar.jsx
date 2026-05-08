@@ -64,7 +64,7 @@ export default function Navbar({ dark, toggleDark, onContactClick }) {
         {/* ── Right actions (desktop) ── */}
         <div className="hidden md:flex flex-none items-center gap-2 ml-auto">
           <a
-            href="/personal/Resume.pdf"
+            href="/personal/ResumeV2.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-1.5 text-sm font-semibold text-indigo-600 dark:text-indigo-400 border border-indigo-400 dark:border-indigo-500 rounded-md hover:bg-indigo-50 dark:hover:bg-indigo-950/40 transition-colors"

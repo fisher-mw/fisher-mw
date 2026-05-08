@@ -53,8 +53,8 @@ export const projects = [
     tags: ['Python', 'Machine Learning', 'Full stack'],
     image: '/projects/default_classifier.png',
     imageScale: 1.4,
-    link: 'https://cpsc-330-project.vercel.app/predict',
-    linkLabel: 'Link to project',
+    link: 'https://github.com/fisher-mw/CPSC-330-Project',
+    linkLabel: 'View on GitHub',
   },
   {
     id: 6,
