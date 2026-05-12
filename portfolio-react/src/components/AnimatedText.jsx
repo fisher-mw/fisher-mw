@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 
 const phrases = [
-  'UBC Computer Science & Statistics Student.',
-  'A developer building for digital wellness.',
-  'UX/UI designer.',
-  'Alpine skier, rock climber & BJJ athlete.',
+  'UBC Computer Science & Statistics Student',
+  'A developer building for digital wellness',
+  'UX/UI designer',
+  'Alpine skier, rock climber & BJJ athlete',
   'Enjoyer of Random Forests (and Random Walks)',
 ]
 

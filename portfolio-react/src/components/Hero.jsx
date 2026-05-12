@@ -35,8 +35,7 @@ export default function Hero({ onContactClick }) {
 
             <FadeIn delay={280}>
               <p className="text-neutral-500 dark:text-zinc-400 text-base leading-relaxed max-w-lg mb-10">
-                CS & Statistics student at UBC — building software at the
-                intersection of math, systems, and design.
+                Computer Science & Statistics student at the University of British Columbia.
               </p>
             </FadeIn>
 

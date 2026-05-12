@@ -36,8 +36,7 @@ export default function About() {
                 <p>
                   I'm a software developer, UX designer, and aspiring mathematician
                   studying <span className="text-neutral-800 dark:text-zinc-200 font-medium">Computer Science and Statistics at UBC</span>.
-                  My coursework spans statistical methods, computer systems, applied
-                  linear algebra, and machine learning.
+                  My coursework spans statistical methods, computer systems, and machine learning.
                 </p>
                 <p>
                   I'm currently building{' '}
@@ -46,7 +45,7 @@ export default function About() {
                 </p>
                 <p>
                   Outside of tech I'm into powerlifting, skiing, climbing, and Brazilian
-                  jiu-jitsu. I enjoy reading, films, and strategy games (Chess, MtG, Catan).
+                  jiu-jitsu. I enjoy reading, films, and strategy games (Chess, Magic the Gathering, Catan).
                 </p>
               </div>
 
