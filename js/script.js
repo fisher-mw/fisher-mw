@@ -63,10 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const txtElement = document.querySelector(".txt");
 
     const phrases = [
-        "UBC Computer Science and Statistics Student.",
-        "A developer building for digital wellness.",
-        "UX/UI designer.",
-        "Alpine skier, rock climber, and Brazilian Ju-Jitsu athelete.",
+        "UBC Computer Science and Statistics Student",
+        "A developer building for digital wellness",
+        "UX/UI designer",
+        "Alpine skier, rock climber, and Brazilian Ju-Jitsu athelete",
         "Enjoyer of Random Forests (and Random Walks...)"
     ];
 
