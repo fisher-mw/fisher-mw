@@ -39,13 +39,14 @@ export default function About() {
                   My coursework spans statistical methods, computer systems, and machine learning.
                 </p>
                 <p>
-                  I'm currently building{' '}
-                  <span className="text-neutral-800 dark:text-zinc-200 font-semibold">Release</span>
-                  , an app designed to promote the act of disconnecting from our phones through social reinforcement.  
+I'm currently working with <span className="text-neutral-800 dark:text-zinc-200 font-medium">Across Indonesian Seas</span> as a Data Consultant. 
+My work involves managing data operations, developing the AIS ontology, and helping implement data-driven solutions that support 
+business decision-making. I am also working on a small team of students within the <span className="text-neutral-800 dark:text-zinc-200 font-medium">UBC Department of Mathematics</span>. Under the supervision of Gabe Currier,
+ we are exploring how finite field theory and linear algebra can be applied to combinatorial problems.
                 </p>
                 <p>
-                  Outside of tech I'm into powerlifting, skiing, climbing, and Brazilian
-                  jiu-jitsu. I enjoy reading, films, and strategy games (Chess, Magic the Gathering, Catan).
+                  Outside of tech and academics, I'm into powerlifting, skiing, climbing, and Brazilian
+                  jiu-jitsu athelete. I enjoy reading, films, and strategy games (Chess, Magic the Gathering, Catan).
                 </p>
               </div>
 
